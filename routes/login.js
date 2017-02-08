@@ -1,7 +1,10 @@
 const router = require('express').Router();
+var passport = require('passport');
 
-router.post('/', function(req, res){
-  // this is where we need to check the password
+
+
+router.post('/', passport.authenticate('local'), function(req, res){
+  res.sendStatus(200);
 });
 
 module.exports = router;
