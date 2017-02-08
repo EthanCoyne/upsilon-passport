@@ -5,6 +5,9 @@ angular.module('passportApp').config(function($routeProvider, $locationProvider)
   $routeProvider.when('/home', {
     templateUrl: 'views/home.html',
     // controller: 'HomeController as home'
+  }).when('/newUser', {
+    templateUrl: 'views/register.html',
+    controller: 'RegisterController as register'
   }).otherwise({
     templateUrl: 'views/login.html',
     controller: 'LoginController as login'
